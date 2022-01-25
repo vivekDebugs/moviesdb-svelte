@@ -1,5 +1,6 @@
 // import adapter from '@sveltejs/adapter-auto';
-const netlify = require('@sveltejs/adapter-netlify');
+// const netlify = require('@sveltejs/adapter-netlify');
+import netlify from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
