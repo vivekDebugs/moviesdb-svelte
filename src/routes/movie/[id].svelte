@@ -1,7 +1,7 @@
 <script context="module">
 	export const load = async ({ fetch, params }) => {
 		const endPoint = `https://api.themoviedb.org/3/movie/${params.id}?api_key=${
-			import.meta.env.VITE_TMDB_API_KEY
+			import.meta.env.VITE_TMDB_API_KEY || process.env.API_KEY
 		}&language=en-US`;
 		const res = await fetch(endPoint);
 		if (res.ok) {
@@ -24,7 +24,6 @@
 <script>
 	import { baseImgUrl } from '../../components/MovieItem.svelte';
 	export let movie;
-	console.log(movie);
 	const getYearFromDate = (date) => date.split('-')[0];
 </script>
 

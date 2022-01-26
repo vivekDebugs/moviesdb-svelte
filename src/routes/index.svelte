@@ -1,6 +1,6 @@
 <script context="module">
 	const endPoint = `https://api.themoviedb.org/3/movie/popular?api_key=${
-		import.meta.env.VITE_TMDB_API_KEY
+		import.meta.env.VITE_TMDB_API_KEY || process.env.API_KEY
 	}`;
 	export const load = async ({ fetch }) => {
 		const res = await fetch(endPoint);
